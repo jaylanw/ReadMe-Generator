@@ -1,6 +1,12 @@
 var inquirer = require("inquirer");
 var fs = require('fs');
+// linking api and markdown js files
+const api = require('./utils/api.js');
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
+const writeToFile = (fileName, data) => {
+  fs.writeFile(fileName + '.md', data, error => error ? console.error(error) : console.log(`${fileName + '.md'} generated!`))
+}
 inquirer.prompt([
   {
     type: "input",
@@ -9,8 +15,8 @@ inquirer.prompt([
   },
   {
     type: "input",
-    name: "discription",
-    message: "Give a discription of your project."
+    name: "description",
+    message: "Give a description of your project."
   },
   {
     type: "input",
@@ -37,6 +43,16 @@ inquirer.prompt([
     name: "contributors",
     message: "Who are the contributors to this application?"
   },
+  {
+    type: "input",
+    name: "tests",
+    message: "Are there any tests?"
+  },
+  {
+    type: "input",
+    name: "questions",
+    message: "Are there any questions?"
+  }
   ])
 const questions = [
 
@@ -48,5 +64,5 @@ function writeToFile(fileName, data) {
 function init() {
 
 }
-
+writeToFile(project.title, await generateMarkdown(project))
 init();
