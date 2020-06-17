@@ -1,7 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require('fs');
 // linking api and markdown js files
-const api = require('./utils/api.js');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
 const writeToFile = (fileName, data) => {
