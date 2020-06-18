@@ -2,8 +2,7 @@ var inquirer = require("inquirer");
 var fs = require('fs');
 // linking markdown js file
 const generateMarkdown = require('./utils/generateMarkdown.js')
-
-
+    
 const questions = [
   inquirer.prompt([
     {
@@ -49,7 +48,7 @@ const questions = [
     {
       type: "input",
       name: "questions",
-      message: "What is your user name?"
+      message: "What is your github username?"
     },
     {
       type: "input",
@@ -61,8 +60,8 @@ const questions = [
 const writeToFile = (fileName, data) => {
   fs.writeFile(fileName + '.md', data, error => error ? console.error(error) : console.log(`${fileName + '.md'} generated!`))
 }
-function init() {
-
+async function init() {
+  writeToFile(questions), await generateMarkdown(questions)
 }
-writeToFile(project.title, await generateMarkdown(project))
+
 init();
