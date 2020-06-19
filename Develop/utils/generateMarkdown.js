@@ -1,29 +1,30 @@
 // function to generate markdown for README
 function generateMarkdown(answers) {
     return `
-    # ${answers.title}
-      ${answers.description}
+# ${answers.title}
+  ${answers.description}
   
-    # Table Of Contensts
-      ${answers.tableOf}
-    # Installation
-      ${answers.installation}
+## Table Of Contensts
+  ${answers.tableOf}
+
+## Installation
+  ${answers.installation}
   
-    # Usage
-      ${answers.usage}
+## Usage
+  ${answers.usage}
   
-    # License
-      ${answers.license}
+## License
+  ${answers.license}
       
-    # Contributors
-      ${answers.contributors}
+## Contributors
+  ${answers.contributors}
   
-    # Tests
+## Tests
       ${answers.tests}
   
-    # Questions
-      ${answers.questions}
-      ${answers.email}
+## Questions
+  ${answers.questions}
+  ${answers.email}
   `;
   }
   
