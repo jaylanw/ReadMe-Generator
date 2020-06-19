@@ -18,7 +18,7 @@
   After installing, answer the prompts in the terminal.
   
 ## License
-  MIT License
+  MIT License [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
       
 ## Contributors
   Jaylan Wienckowski
