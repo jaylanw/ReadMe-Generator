@@ -1,10 +1,16 @@
-var inquirer = require("inquirer");
-var fs = require('fs');
+const inquirer = require("inquirer");
+const fs = require('fs');
+
 // linking markdown js file
 const generateMarkdown = require('./utils/generateMarkdown.js')
-    
-const questions = [
-  inquirer.prompt([
+
+const writeFile = (data) => {
+  fs.writeFile("README" + '.md', data, 
+    error => error ? console.error(error) : 
+      console.log(`${"README" + '.md'} generated!`))
+}
+
+const questions = [ 
     {
       type: "input",
       name: "title",
@@ -52,16 +58,18 @@ const questions = [
     },
     {
       type: "input",
-      name: "eamil",
+      name: "email",
       message: "What is your email?"
     }
-    ])
-];
-const writeToFile = (fileName, data) => {
-  fs.writeFile(fileName + '.md', data, error => error ? console.error(error) : console.log(`${fileName + '.md'} generated!`))
-}
-async function init() {
-  writeToFile(questions), await generateMarkdown(questions)
+    ];
+
+ function init() {
+  inquirer.prompt(questions)
+    .then(answers => {
+      console.log(answers);
+     writeFile(generateMarkdown(answers))
+
+    }); 
 }
 
 init();
