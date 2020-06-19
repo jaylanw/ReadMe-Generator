@@ -2,7 +2,6 @@
 # README Generator
   Readme Generator allows the user to create a readme file from the terminal.
   
- <iframe src="https://drive.google.com/file/d/15OlYEkxgiKUuzM62GkWSG6bUy8anPaIB/preview" width="640" height="480"></iframe>
 ## Table Of Contensts
   - Installation
   - Usage
