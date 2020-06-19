@@ -23,11 +23,6 @@ const questions = [
     },
     {
       type: "input",
-      name: "tableOf",
-      message: "What are the Table Of Contents of your project?"
-    },
-    {
-      type: "input",
       name: "installation",
       message: "What is the installation process of your project?"
     },

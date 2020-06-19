@@ -1,26 +1,34 @@
 
-# README-Generator
-  Readme Generator allows the user to create a readme file in the terminal.
+# README Generator
+  Readme Generator allows the user to create a readme file from the terminal.
   
 ## Table Of Contensts
-  Installation, Usage, Contributors, Tests, Questions
+  - Installation
+  - Usage
+  - License
+  - Contributors
+  - Tests 
+  - Questions
+  
 
 ## Installation
-  To begin the installation process of the generator, firs fork the repo. Then, open the terminal and run node indes.js
+  To begin installation process, first fork the project. Then, simply open the terminal and run node index.js
   
 ## Usage
-  To use this application, run node index.js then simply answer the prompts.
+  After installing, answer the prompts in the terminal.
   
 ## License
-  No license
+  MIT License
       
 ## Contributors
   Jaylan Wienckowski
   
 ## Tests
-      No tests
+      
   
 ## Questions
-  Jaylanw
+  Github username: Jaylanw
+  
+  For any queations, reach me at:
   jaylanwienckowski@gmail.com
   
